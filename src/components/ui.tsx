@@ -82,7 +82,7 @@ export function SectionHeading({
         {title}
       </h2>
       <div
-        className={`mx-auto mt-4 h-1 w-16 rounded-full bg-brand ${
+        className={`mx-auto mt-4 h-1 rounded-full bg-brand animate-line-grow ${
           dark ? "opacity-80" : ""
         }`}
       />

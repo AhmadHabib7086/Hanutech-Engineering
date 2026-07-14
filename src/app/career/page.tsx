@@ -1,3 +1,4 @@
+import ScrollReveal from "@/src/components/ScrollReveal";
 import { Container, SectionHeading, Button } from "@/src/components/ui";
 
 export const metadata = { title: "Career" };
@@ -11,8 +12,8 @@ const openings = [
 
 export default function CareerPage() {
   return (
-    <div className="bg-white dark:bg-slate-900">
-      <section className="bg-ink dark:bg-slate-950 py-20 text-white"
+    <div className="bg-white ">
+      <section className="relative bg-ink py-24 text-white overflow-hidden"
        style={{
     backgroundImage:
       "url('https://gesrepair.com/wp-content/uploads/bigstock-140745698.jpg')",
@@ -20,7 +21,22 @@ export default function CareerPage() {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   }}>
-        <Container>
+
+    {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/75 z-10"></div>
+        <div className="absolute inset-0 bg-grid-blueprint opacity-40 z-10"></div>
+
+        {/* Rotating technical gear */}
+        <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden opacity-20 lg:block pointer-events-none z-10 text-brand">
+          <svg className="animate-spin-slow h-80 w-80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <circle cx="50" cy="50" r="30" />
+            <circle cx="50" cy="50" r="10" />
+            <path d="M46 10h8v12h-8zM46 78h8v12h-8zM10 46h12v8H10zM78 46h12v8H78z" />
+          </svg>
+        </div>
+
+        <Container className="relative z-20">
+          <ScrollReveal variant="fade-up" duration={800}>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-light">
             Career
           </p>
@@ -31,6 +47,7 @@ export default function CareerPage() {
             Join a team of engineers passionate about solving real-world
             industrial challenges with precision and innovation.
           </p>
+          </ScrollReveal>
         </Container>
       </section>
 

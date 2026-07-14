@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks, siteConfig } from "@/src/lib/data";
-import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -17,12 +17,25 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="text-xl font-extrabold tracking-tight text-ink dark:text-white">
-            {siteConfig.brand}
-          </span>
-          <span className="hidden text-xs font-medium text-brand sm:inline">
-            {siteConfig.tagline}
-          </span>
+        <div className="flex items-center gap-3">
+  <Image 
+  src={siteConfig.logo}
+  alt="logo"
+  width={50}
+  height={50}
+  className="h-12 w-auto object-contain"
+/>
+
+  <div className="flex flex-col">
+    <span className="text-xl font-extrabold tracking-wide text-ink dark:text-white">
+      {siteConfig.brand}
+    </span>
+
+    <span className="text-xs text-orange-500">
+      {siteConfig.tagline}
+    </span>
+  </div>
+</div>
         </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">
@@ -43,7 +56,6 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-1 sm:gap-3">
-          <ThemeToggle />
           <Link
             href="/get-query"
             className="hidden rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-dark sm:inline-flex"
@@ -78,37 +90,10 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        // <div className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 lg:hidden">
-        //   <ul className="space-y-1 px-4 py-3">
-        //     {navLinks.map((link) => (
-        //       <li key={link.href}>
-        //         <Link
-        //           href={link.href}
-        //           onClick={() => setOpen(false)}
-        //           className={`block rounded-md px-3 py-2 text-sm font-medium ${
-        //             isActive(link.href)
-        //               ? "bg-orange-50 dark:bg-orange-950/40 text-brand"
-        //               : "text-ink-soft dark:text-slate-300 hover:bg-slate-50 dark:bg-slate-950"
-        //           }`}
-        //         >
-        //           {link.label}
-        //         </Link>
-        //       </li>
-        //     ))}
-        //     <li>
-        //       <Link
-        //         href="/get-query"
-        //         onClick={() => setOpen(false)}
-        //         className="mt-2 block rounded-md bg-brand px-3 py-2 text-center text-sm font-semibold text-white"
-        //       >
-        //         Get Query
-        //       </Link>
-        //     </li>
-        //   </ul>
-        // </div>
+        
 
         <div
-  className={`overflow-hidden transition-all duration-500 ease-in-out lg:hidden ${
+  className={`overflow-hidden transition-all duration-1000 ease-in-out lg:hidden ${
     open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
   }`}
 >

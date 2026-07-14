@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-brand: #f97316;
@@ -17,10 +16,6 @@
   --foreground: #0f172a;
 }
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
 
 html {
   scroll-behavior: smooth;
@@ -46,7 +41,12 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 ::selection {
@@ -68,39 +68,70 @@ body {
   border-color: rgba(249, 115, 22, 0.5);
 }
 
-.dark .lift:hover {
-  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.6);
-}
-
-@keyframes fade-up {
+@keyframes spin-slow {
   from {
-    opacity: 0;
-    transform: translateY(16px);
+    transform: rotate(0deg);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: rotate(360deg);
   }
 }
 
-
-
-
-@keyframes marquee {
+@keyframes spin-reverse-slow {
   from {
-    transform: translateX(0);
+    transform: rotate(360deg);
   }
-
   to {
-    transform: translateX(-50%);
+    transform: rotate(0deg);
   }
 }
 
-.animate-marquee {
-  width: max-content;
-  animation: marquee 18s linear infinite;
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 30s linear infinite;
 }
+
+@keyframes line-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 4rem;
+  }
+}
+
+.animate-line-grow {
+  animation: line-grow 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Blueprint grids */
+.bg-grid-blueprint {
+  background-image: 
+    linear-gradient(rgba(249, 115, 22, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-grid-dots {
+  background-image: radial-gradient(circle, rgba(249, 115, 22, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glow effects */
+.glow-orange {
+  box-shadow: 0 0 20px 2px rgba(249, 115, 22, 0.1);
+}
+
+.glow-orange-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-orange-hover:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 25px 4px rgba(249, 115, 22, 0.2);
+  transform: translateY(-4px);
+}
+

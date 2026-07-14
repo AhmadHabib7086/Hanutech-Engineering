@@ -2,6 +2,7 @@ export const siteConfig = {
   name: "Hanutech Engineering",
   brand: "HANUTECH",
   tagline: "Feel the Engineering",
+   logo: "/videos/catalog-icon-final.jpg", // 👈 Image ka path
   description:
     "Total Engineering Solutions for Pumps, Pipelines, Industrial Automation and Plant Engineering.",
   address:
