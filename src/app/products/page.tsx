@@ -43,24 +43,6 @@ export default function ProductsPage() {
           </p>
           </ScrollReveal>
         </Container>
-
-
-        {/* <Container className="relative z-20">
-                  <ScrollReveal variant="fade-up" duration={800}>
-                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-light">
-                      About Us
-                    </p>
-                    <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl max-w-4xl leading-tight">
-                      Engineering excellence since day one
-                    </h1>
-                    <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
-                      {siteConfig.name} is a total engineering solutions provider
-                      specializing in pumps, pipelines, industrial automation and plant
-                      engineering. We partner with industries worldwide to deliver
-                      reliable, efficient and future-ready infrastructure.
-                    </p>
-                  </ScrollReveal>
-                </Container> */}
       </section>
 
       <section className="py-20">
