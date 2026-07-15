@@ -23,7 +23,7 @@ export default function Navbar() {
   alt="logo"
   width={50}
   height={50}
-  className="h-12 w-auto object-contain"
+  className="h-12 w-auto object-contain rounded-full"
 />
 
   <div className="flex flex-col">

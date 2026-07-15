@@ -59,16 +59,16 @@ export default function Home() {
 
         <Container className="relative flex flex-col items-center py-24 text-center sm:py-32 z-20">
           <ScrollReveal variant="fade-up" duration={900}>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-brand-light">
+            <p className="mb-4 text-xl font-semibold uppercase tracking-[0.3em] text-brand-light ">
               {siteConfig.brand}
             </p>
             <h1 className="max-w-3xl text-4xl font-extrabold leading-tight sm:text-6xl">
               {siteConfig.name}
             </h1>
-            <p className="mt-4 text-2xl font-light text-orange-300">
+            <p className="mt-4 text-2xl font-light text-orange-300 font-semibold ">
               {siteConfig.tagline}
             </p>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-250">
               {siteConfig.description} Elevating industrial standards through
               innovation and precision.
             </p>
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="relative border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950 bg-grid-dots overflow-hidden">
+      {/* <section className="relative border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950 bg-grid-dots overflow-hidden">
         <Container className="grid grid-cols-2 gap-6 py-12 lg:grid-cols-4 relative z-10">
           {stats.map((s, idx) => (
             <ScrollReveal
@@ -150,7 +150,40 @@ export default function Home() {
             </ScrollReveal>
           ))}
         </Container>
-      </section>
+      </section> */}
+
+      <section className="relative border-b border-slate-100 bg-white overflow-hidden">
+  <Container className="relative z-10 grid grid-cols-2 gap-6 py-16 lg:grid-cols-4">
+    {stats.map((s, idx) => (
+      <ScrollReveal
+        key={s.label}
+        variant="scale-up"
+        delay={idx * 150}
+        className="
+          rounded-2xl
+          border border-slate-100
+          bg-white
+          p-8
+          text-center
+          shadow-md
+          transition-all
+          duration-300
+          hover:-translate-y-2
+          hover:shadow-xl
+          hover:border-orange-300
+        "
+      >
+        <p className="text-4xl font-extrabold text-orange-600">
+          {s.value}
+        </p>
+
+        <p className="mt-3 text-base font-medium text-slate-600">
+          {s.label}
+        </p>
+      </ScrollReveal>
+    ))}
+  </Container>
+</section>
 
       {/* Core Competencies */}
       <section className="relative bg-slate-50 dark:bg-slate-950 py-20 bg-grid-blueprint overflow-hidden">
