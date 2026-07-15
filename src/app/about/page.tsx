@@ -178,39 +178,78 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action & Mission Section */}
-      <section className="relative py-24 overflow-hidden bg-slate-900 text-white">
-        {/* Repeating Blueprint background */}
-        <div className="absolute inset-0 bg-grid-blueprint opacity-10"></div>
-        
-        {/* Spin Gear backdrop decoration */}
-        <div className="absolute -left-12 -bottom-12 hidden opacity-10 lg:block pointer-events-none text-brand">
-          <svg className="animate-spin-reverse-slow h-80 w-80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <circle cx="50" cy="50" r="30" />
-            <circle cx="50" cy="50" r="10" />
-            <path d="M46 10h8v12h-8zM46 78h8v12h-8zM10 46h12v8H10zM78 46h12v8H78z" />
-          </svg>
-        </div>
 
-        <Container className="relative z-10 text-center">
-          <ScrollReveal variant="scale-up" duration={800}>
-            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand/20 text-brand">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">Our Mission</h2>
-            <p className="mx-auto mt-4 max-w-3xl text-slate-300 text-lg leading-relaxed">
-              To elevate industrial standards through innovation and precision,
-              building engineering systems that perform flawlessly for decades.
-            </p>
-            <div className="mt-10">
-              <Button href="/contact" variant="primary" className="glow-orange">
-                Work With Us
-              </Button>
-            </div>
-          </ScrollReveal>
-        </Container>
-      </section>
+
+     
+      <section
+  className="relative overflow-hidden bg-slate-900 py-24 text-white"
+  style={{
+    backgroundImage:
+      "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShIqmUuXDpBFj0NRm7Yw3buWQgFquO4ZzoSZictCkhB3ft88f1vfxndw8&s=10')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/70"></div>
+
+  {/* Blueprint Overlay */}
+  <div className="absolute inset-0 bg-grid-blueprint opacity-20"></div>
+
+  {/* Gear Decoration */}
+  <div className="absolute -left-12 -bottom-12 hidden opacity-10 lg:block pointer-events-none text-brand z-10">
+    <svg
+      className="animate-spin-reverse-slow h-80 w-80"
+      viewBox="0 0 100 100"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <circle cx="50" cy="50" r="30" />
+      <circle cx="50" cy="50" r="10" />
+      <path d="M46 10h8v12h-8zM46 78h8v12h-8zM10 46h12v8H10zM78 46h12v8H78z" />
+    </svg>
+  </div>
+
+  <Container className="relative z-20 text-center">
+    <ScrollReveal variant="scale-up" duration={800}>
+      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand/20 text-brand">
+        <svg
+          className="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13 10V3L4 14h7v7l9-11h-7z"
+          />
+        </svg>
+      </div>
+
+      <h2 className="text-3xl font-bold sm:text-4xl">
+        Our Mission
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-slate-300">
+        To elevate industrial standards through innovation and precision,
+        building engineering systems that perform flawlessly for decades.
+      </p>
+
+      <div className="mt-10">
+        <Button href="/contact" variant="primary" className="glow-orange">
+          Work With Us
+        </Button>
+      </div>
+    </ScrollReveal>
+  </Container>
+</section>
+
+
+
     </div>
   );
 }

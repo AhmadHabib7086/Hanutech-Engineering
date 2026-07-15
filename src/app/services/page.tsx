@@ -49,7 +49,7 @@ export default function ServicesPage() {
 
       </section>
 
-      <section className="py-20">
+      {/* <section className="py-20">
         <Container>
           <div className="space-y-12">
             {services.map((s, i) => (
@@ -96,7 +96,72 @@ export default function ServicesPage() {
             </Button>
           </div>
         </Container>
-      </section>
+      </section> */}
+      <section className="py-20">
+  <Container>
+    <div className="space-y-12">
+      {services.map((s, i) => (
+        <ScrollReveal
+          key={s.slug}
+          variant={i % 2 === 0 ? "slide-left" : "slide-right"}
+          delay={i * 100}
+          duration={800}
+        >
+          <div className="grid items-center gap-8 lg:grid-cols-2">
+            {/* Image */}
+            <div className={i % 2 === 1 ? "lg:order-2" : ""}>
+              <div className="group relative h-64 w-full overflow-hidden rounded-xl lift shadow-lg">
+                <Image
+                  src={`https://hanutech-website.vercel.app${s.image}`}
+                  alt={s.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div>
+              <h2 className="text-2xl font-bold text-ink dark:text-white">
+                {s.title}
+              </h2>
+
+              <p className="mt-3 text-ink-soft dark:text-slate-300">
+                {s.description}
+              </p>
+
+              <ul className="mt-4 space-y-2">
+                {s.features.map((f) => (
+                  <li
+                    key={f}
+                    className="flex items-start gap-2 text-sm text-ink-soft dark:text-slate-300"
+                  >
+                    <span className="mt-1 text-brand">✓</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="/get-query"
+                className="mt-5 inline-block text-sm font-semibold text-brand transition-all duration-300 hover:translate-x-2 hover:underline"
+              >
+                Request a Quote →
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
+      ))}
+    </div>
+
+    <div className="mt-16 text-center">
+      <Button href="/projects" variant="primary">
+        See Our Projects
+      </Button>
+    </div>
+  </Container>
+</section>
     </div>
   );
 }

@@ -263,29 +263,306 @@ export const clients = [
 
 export const partners = ["Sandpiper", "Cognito", "Viking", "Pulsafeeder"];
 
-export const products = [
+export type Product = {
+  slug: string;
+  name: string;
+  category: "pumps" | "automation" | "instrumentation" | "fabrication";
+  brand?: string;
+  short: string;
+  description: string;
+  features: string[];
+  specs: string[];
+  image: string;
+};
+
+export const productCategories = [
+  { id: "all", label: "All Products" },
+  { id: "pumps", label: "Pumps & Fluid Transfer" },
+  { id: "automation", label: "Automation & Control" },
+  { id: "instrumentation", label: "Instrumentation" },
+  { id: "fabrication", label: "Fabrication & Storage" },
+] as const;
+
+export const products: Product[] = [
   {
+    slug: "aodd-pumps",
     name: "AODD Pumps",
-    desc: "Air operated double diaphragm pumps for versatile fluid transfer.",
+    category: "pumps",
+    brand: "Sandpiper",
+    short: "Air-operated double diaphragm pumps for abrasive, viscous and shear-sensitive fluids.",
+    description:
+      "Sandpiper AODD pumps deliver reliable, leak-free fluid transfer across chemical, paint, food and wastewater applications. Self-priming design handles solids and slurries without damage to the pumped medium.",
+    features: [
+      "Self-priming & dry-run capable",
+      "Handles solids up to 6 mm",
+      "Bolted construction for easy maintenance",
+      "ATEX & FDA compliant options",
+    ],
+    specs: ["Flow: up to 1,000 LPM", "Pressure: up to 8.3 bar", "Sizes: 1/4\" to 3\""],
+    image: "/images/pump-room.jpeg",
   },
   {
+    slug: "eodd-pumps",
     name: "EODD Pumps",
-    desc: "Electric operated double diaphragm pumps with higher efficiency.",
+    category: "pumps",
+    brand: "Sandpiper",
+    short: "Electric double diaphragm pumps with energy-efficient, precision-controlled operation.",
+    description:
+      "Electric Operated Double Diaphragm pumps combine the versatility of diaphragm technology with precise electric drive. Ideal for batch dosing, transfer and recirculation in automated process lines.",
+    features: [
+      "Energy-efficient electric drive",
+      "Precise flow control",
+      "Low pulsation output",
+      "Suitable for hazardous areas",
+    ],
+    specs: ["Flow: up to 400 LPM", "Pressure: up to 6 bar", "Power: 0.37–2.2 kW"],
+    image: "/images/centralized-pump-room.jpeg",
   },
   {
+    slug: "gear-pumps",
     name: "Gear Pumps",
-    desc: "Positive displacement gear pumps for viscous media.",
+    category: "pumps",
+    brand: "Viking",
+    short: "Positive displacement gear pumps engineered for high-viscosity industrial media.",
+    description:
+      "Viking gear pumps provide consistent, pulse-free flow for oils, resins, adhesives and polymer melts. Rugged cast-iron and stainless steel construction ensures decades of dependable service.",
+    features: [
+      "Handles viscosities up to 1,000,000 cP",
+      "Pulse-free, metered flow",
+      "Reversible operation",
+      "Jacketed options for heated media",
+    ],
+    specs: ["Flow: 0.5–500 GPM", "Pressure: up to 200 PSI", "Materials: CI, SS, Alloy"],
+    image: "/images/liquid-primer-plant.jpeg",
   },
   {
-    name: "Control Panels",
-    desc: "PLC/SCADA based control panels for plant automation.",
+    slug: "dosing-pumps",
+    name: "Dosing Pumps",
+    category: "pumps",
+    brand: "Pulsafeeder",
+    short: "Precision metering pumps for chemical injection and water treatment dosing.",
+    description:
+      "Pulsafeeder dosing pumps deliver accurate chemical injection for water treatment, boiler feed and process dosing. Available in diaphragm and piston configurations with full stroke adjustment.",
+    features: [
+      "Turndown ratio up to 100:1",
+      "Manual & automatic stroke control",
+      "PVDF & SS wetted parts",
+      "Integrated relief valve",
+    ],
+    specs: ["Flow: 0.1–1,000 LPH", "Pressure: up to 20 bar", "Accuracy: ±1%"],
+    image: "/images/water-treatment.png",
   },
   {
-    name: "Instrumentation Kits",
-    desc: "Flow, level, pressure & temperature measurement packages.",
+    slug: "centrifugal-pumps",
+    name: "Centrifugal Pumps",
+    category: "pumps",
+    short: "High-efficiency centrifugal pumps for clean and process fluid transfer.",
+    description:
+      "End-suction and inline centrifugal pumps for water, chemicals and light slurries. Engineered for continuous duty in utility, cooling and process transfer applications with minimal maintenance.",
+    features: [
+      "High hydraulic efficiency",
+      "Back-pull-out design",
+      "Mechanical seal & packing options",
+      "CI, SS & PP construction",
+    ],
+    specs: ["Flow: up to 500 m³/hr", "Head: up to 80 m", "Temperature: up to 120°C"],
+    image: "/images/pump-room.jpeg",
   },
   {
-    name: "Fabricated Tanks",
-    desc: "Custom MS/SS storage tanks and process vessels.",
+    slug: "submersible-pumps",
+    name: "Submersible Pumps",
+    category: "pumps",
+    short: "Heavy-duty submersible pumps for sump, effluent and dewatering applications.",
+    description:
+      "Robust submersible pumps designed for industrial sump pits, effluent transfer and construction dewatering. Corrosion-resistant construction with thermal overload protection.",
+    features: [
+      "Fully submersible IP68 rated",
+      "Thermal overload protection",
+      "Cast iron & SS variants",
+      "Auto float-switch compatible",
+    ],
+    specs: ["Flow: up to 200 m³/hr", "Head: up to 40 m", "Solids handling: up to 50 mm"],
+    image: "/images/water-treatment.png",
+  },
+  {
+    slug: "plc-control-panels",
+    name: "PLC Control Panels",
+    category: "automation",
+    brand: "Cognito",
+    short: "Custom-built PLC panels for process automation, interlocking and sequence control.",
+    description:
+      "Engineered PLC control panels integrate Siemens, Allen-Bradley and Schneider platforms. Designed, wired and tested in-house with full documentation, IO lists and FAT certification.",
+    features: [
+      "Siemens / Allen-Bradley / Schneider PLCs",
+      "Custom HMI integration",
+      "Full FAT & documentation",
+      "IP54 / IP65 enclosure options",
+    ],
+    specs: ["IO: 16–512 points", "Enclosure: IP54/IP65", "Voltage: 415V 3-phase"],
+    image: "/images/hanutech-robotics.jpeg",
+  },
+  {
+    slug: "scada-systems",
+    name: "SCADA Systems",
+    category: "automation",
+    short: "Supervisory control and data acquisition for real-time plant monitoring.",
+    description:
+      "Complete SCADA solutions with real-time dashboards, alarm management, historical trending and remote access. Integrates with PLCs, RTUs and IoT sensors for unified plant visibility.",
+    features: [
+      "Real-time dashboards & trending",
+      "Alarm & event management",
+      "Remote web/mobile access",
+      "Historian & reporting",
+    ],
+    specs: ["Tags: up to 10,000", "Protocols: Modbus, OPC-UA", "Uptime: 99.9%"],
+    image: "/images/centralized-pump-room.jpeg",
+  },
+  {
+    slug: "iot-monitoring",
+    name: "IoT Monitoring Units",
+    category: "automation",
+    short: "Wireless IoT sensors and gateways for remote equipment health monitoring.",
+    description:
+      "IoT-enabled monitoring packages for vibration, temperature, pressure and flow. Cloud-connected dashboards provide predictive maintenance alerts and energy consumption analytics.",
+    features: [
+      "Wireless sensor networks",
+      "Cloud dashboard access",
+      "Predictive maintenance alerts",
+      "Energy analytics",
+    ],
+    specs: ["Range: up to 500 m", "Battery life: 2–5 years", "Cloud: AWS / Azure"],
+    image: "/images/hanutech-robotics.jpeg",
+  },
+  {
+    slug: "motor-control-centers",
+    name: "Motor Control Centers",
+    category: "automation",
+    short: "Modular MCC panels for motor starting, protection and distribution.",
+    description:
+      "Custom motor control centers with DOL, star-delta, VFD and soft-starter configurations. Compliant with IEC 61439 standards with comprehensive protection and indication.",
+    features: [
+      "DOL / Star-Delta / VFD starters",
+      "Short-circuit & overload protection",
+      "Modular withdrawable design",
+      "IEC 61439 compliant",
+    ],
+    specs: ["Rating: up to 630A", "Voltage: 415V", "Enclosure: Form 2B/4B"],
+    image: "/images/birla-white-plant.jpeg",
+  },
+  {
+    slug: "flow-meters",
+    name: "Flow Meters",
+    category: "instrumentation",
+    short: "Electromagnetic, ultrasonic and turbine flow meters for accurate measurement.",
+    description:
+      "Precision flow measurement instruments for water, chemicals and slurries. Electromagnetic, ultrasonic clamp-on and turbine types with 4–20 mA output and digital display.",
+    features: [
+      "Electromagnetic & ultrasonic types",
+      "4–20 mA & HART output",
+      "Battery & mains powered",
+      "IP67 enclosure rating",
+    ],
+    specs: ["Accuracy: ±0.5%", "Sizes: DN15–DN600", "Output: 4–20 mA / RS485"],
+    image: "/images/centralized-pump-room.jpeg",
+  },
+  {
+    slug: "level-transmitters",
+    name: "Level Transmitters",
+    category: "instrumentation",
+    short: "Radar, ultrasonic and capacitance level transmitters for tanks and vessels.",
+    description:
+      "Non-contact and guided-wave level transmitters for storage tanks, silos and process vessels. Suitable for aggressive chemicals, high temperatures and foamy media.",
+    features: [
+      "Radar / ultrasonic / capacitance",
+      "Non-contact measurement",
+      "HART & Foundation Fieldbus",
+      "Explosion-proof options",
+    ],
+    specs: ["Range: up to 30 m", "Accuracy: ±3 mm", "Process temp: up to 200°C"],
+    image: "/images/birla-white-plant.jpeg",
+  },
+  {
+    slug: "pressure-instruments",
+    name: "Pressure Instruments",
+    category: "instrumentation",
+    short: "Pressure gauges, transmitters and switches for process and safety monitoring.",
+    description:
+      "Industrial pressure gauges, differential transmitters and pressure switches for pipeline and vessel monitoring. SS diaphragm seals for corrosive and high-temperature service.",
+    features: [
+      "Gauges, transmitters & switches",
+      "Diaphragm seal options",
+      "SIL-rated safety switches",
+      "Calibration certificates included",
+    ],
+    specs: ["Range: 0–600 bar", "Accuracy: ±0.25%", "Output: 4–20 mA"],
+    image: "/images/pump-room.jpeg",
+  },
+  {
+    slug: "temperature-sensors",
+    name: "Temperature Sensors",
+    category: "instrumentation",
+    short: "RTD, thermocouple and infrared sensors for process temperature control.",
+    description:
+      "Precision temperature measurement with RTD Pt100, Type K thermocouples and infrared pyrometers. Thermowells, transmitters and local indicators for complete temperature loops.",
+    features: [
+      "RTD Pt100 & thermocouples",
+      "Infrared non-contact types",
+      "Thermowell protection",
+      "Head-mounted transmitters",
+    ],
+    specs: ["Range: -200°C to 1,600°C", "Accuracy: ±0.1°C", "Output: 4–20 mA"],
+    image: "/images/manufacturing.png",
+  },
+  {
+    slug: "storage-tanks",
+    name: "MS/SS Storage Tanks",
+    category: "fabrication",
+    short: "Custom-fabricated mild steel and stainless steel storage tanks to ASME standards.",
+    description:
+      "Engineered storage tanks for chemicals, water, oils and process fluids. Horizontal and vertical configurations with dished ends, manholes, nozzles and internal coatings.",
+    features: [
+      "MS, SS 304/316 construction",
+      "ASME & API compliant",
+      "Internal epoxy/FRP lining",
+      "Hydro test certified",
+    ],
+    specs: ["Capacity: 500 L–50,000 L", "Pressure: atmospheric", "Material: MS / SS"],
+    image: "/images/birla-white-plant.jpeg",
+  },
+  {
+    slug: "process-vessels",
+    name: "Process Vessels & Reactors",
+    category: "fabrication",
+    short: "Jacketed reactors, mixing vessels and pressure vessels for chemical processing.",
+    description:
+      "Custom process vessels with agitators, jackets, coils and insulation for chemical, paint and pharmaceutical production. Designed to ASME Section VIII with full NDT testing.",
+    features: [
+      "Jacketed & coil heating",
+      "Agitator & baffle integration",
+      "ASME Section VIII design",
+      "Full NDT & hydro testing",
+    ],
+    specs: ["Volume: 100 L–20,000 L", "Pressure: up to 10 bar", "Material: SS 316L"],
+    image: "/images/liquid-primer-plant.jpeg",
+  },
+  {
+    slug: "custom-skids",
+    name: "Custom Skids & Frames",
+    category: "fabrication",
+    short: "Modular pump skids, dosing packages and equipment frames built to specification.",
+    description:
+      "Pre-assembled modular skids integrating pumps, piping, instrumentation and control panels on structural steel frames. Factory-tested and ready for plug-and-play site installation.",
+    features: [
+      "Pump & dosing skid packages",
+      "Pre-wired & pre-piped",
+      "Factory acceptance tested",
+      "Plug-and-play installation",
+    ],
+    specs: ["Frame: ISMC / SHS steel", "Finish: epoxy painted", "Testing: FAT included"],
+    image: "/images/paint-industry.png",
   },
 ];
+
+export function getProduct(slug: string) {
+  return products.find((p) => p.slug === slug);
+}
