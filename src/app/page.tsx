@@ -65,7 +65,7 @@ export default function Home() {
             <h1 className="max-w-3xl text-4xl font-extrabold leading-tight sm:text-6xl">
               {siteConfig.name}
             </h1>
-            <p className="mt-4 text-2xl font-light text-orange-300 font-semibold ">
+            <p className="mt-3 text-2xl font-light text-orange-300 font-semibold uppercase tracking-[0.3em] ">
               {siteConfig.tagline}
             </p>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-250">
