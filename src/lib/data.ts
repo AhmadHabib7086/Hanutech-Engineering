@@ -112,7 +112,7 @@ export const services: Service[] = [
       "Certified welding (ASME)",
       "Surface treatment & painting",
     ],
-    image: "/videos/manufacturinng.jfif",
+    image: "/images_p/Industrial Fabrication.jpeg",
   },
 ];
 
