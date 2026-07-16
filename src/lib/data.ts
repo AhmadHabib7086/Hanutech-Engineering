@@ -152,7 +152,7 @@ export const industries: Industry[] = [
   {
     slug: "manufacturing",
     title: "Manufacturing",
-    image: "/videos/manufacturinng.jfif",
+    image: "/images_p/manufacturing.cms",
     description:
       "Plant-wide utility and automation engineering for discrete and process manufacturing.",
   },
