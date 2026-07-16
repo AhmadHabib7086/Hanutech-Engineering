@@ -241,7 +241,7 @@ export default function AboutPage() {
 
       <div className="mt-10">
         <Button href="/contact" variant="primary" className="glow-orange">
-          Work With Us
+          Enquire Now
         </Button>
       </div>
     </ScrollReveal>
