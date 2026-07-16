@@ -447,7 +447,7 @@ export const products: Product[] = [
       "IEC 61439 compliant",
     ],
     specs: ["Rating: up to 630A", "Voltage: 415V", "Enclosure: Form 2B/4B"],
-    image: "/videos/manufacturinng.jfif",
+    image: "/images_p/Motor Control Centers.webp",
   },
   {
     slug: "flow-meters",
@@ -495,7 +495,7 @@ export const products: Product[] = [
       "Calibration certificates included",
     ],
     specs: ["Range: 0–600 bar", "Accuracy: ±0.25%", "Output: 4–20 mA"],
-    image: "/videos/paint.jfif",
+    image: "/images_p/Pressure Instruments.jpg",
   },
   {
     slug: "temperature-sensors",
@@ -511,7 +511,7 @@ export const products: Product[] = [
       "Head-mounted transmitters",
     ],
     specs: ["Range: -200°C to 1,600°C", "Accuracy: ±0.1°C", "Output: 4–20 mA"],
-    image: "/videos/manufacturinng.jfif",
+    image: "/images_p/Temperature Sensors.jpg",
   },
   {
     slug: "storage-tanks",
@@ -527,7 +527,7 @@ export const products: Product[] = [
       "Hydro test certified",
     ],
     specs: ["Capacity: 500 L–50,000 L", "Pressure: atmospheric", "Material: MS / SS"],
-    image: "/videos/manufacturinng.jfif",
+    image: "/images_p/MS-SS-Storage-Tanks.jpg",
   },
   {
     slug: "process-vessels",
@@ -543,7 +543,7 @@ export const products: Product[] = [
       "Full NDT & hydro testing",
     ],
     specs: ["Volume: 100 L–20,000 L", "Pressure: up to 10 bar", "Material: SS 316L"],
-    image: "/videos/chemical.jfif",
+    image: "/images_p/Process Vessels & Reactors.jpg",
   },
   {
     slug: "custom-skids",
@@ -559,7 +559,7 @@ export const products: Product[] = [
       "Plug-and-play installation",
     ],
     specs: ["Frame: ISMC / SHS steel", "Finish: epoxy painted", "Testing: FAT included"],
-    image: "/videos/paint.jfif",
+    image: "/images_p/Custom Skids & Frames.webp",
   },
 ];
 
