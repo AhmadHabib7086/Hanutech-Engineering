@@ -97,7 +97,7 @@ export const services: Service[] = [
       "Control loop tuning",
       "Safety & alarm systems",
     ],
-    image: "/image_s/instrumentation.jpg",
+    image: "/image_s/Instrumentation.jpg",
   },
   {
     slug: "industrial-fabrication",
@@ -316,7 +316,7 @@ export const products: Product[] = [
       "Suitable for hazardous areas",
     ],
     specs: ["Flow: up to 400 LPM", "Pressure: up to 6 bar", "Power: 0.37–2.2 kW"],
-    image: "/images_p/EODD pumps.webp",
+    image: "/images_p/EODD Pumps.webp",
   },
   {
     slug: "gear-pumps",
@@ -333,7 +333,7 @@ export const products: Product[] = [
       "Jacketed options for heated media",
     ],
     specs: ["Flow: 0.5–500 GPM", "Pressure: up to 200 PSI", "Materials: CI, SS, Alloy"],
-    image: "/images_p/Gear pumps.jpg",
+    image: "/images_p/Gear Pumps.jpg",
   },
   {
     slug: "dosing-pumps",
