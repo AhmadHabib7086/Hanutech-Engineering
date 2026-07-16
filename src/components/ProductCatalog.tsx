@@ -70,7 +70,7 @@ function ProductCard({ product }: { product: Product }) {
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-xl">
       <div className="relative h-48 w-full overflow-hidden bg-slate-100">
         <Image
-          src={`https://hanutech-website.vercel.app${product.image}`}
+          src={product.image}
           alt={product.name}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"

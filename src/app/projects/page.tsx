@@ -56,7 +56,7 @@ export default function ProjectsPage() {
               >
                 <div className="relative h-56 w-full">
                   <Image
-                    src={`https://hanutech-website.vercel.app${p.image}`}
+                    src={p.image}
                     alt={p.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"

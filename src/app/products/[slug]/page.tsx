@@ -42,7 +42,7 @@ export default async function ProductDetail({
     <div className="bg-white">
       <section className="relative h-80 bg-ink">
         <Image
-          src={`https://hanutech-website.vercel.app${product.image}`}
+          src={product.image}
           alt={product.name}
           fill
           sizes="100vw"
@@ -163,7 +163,7 @@ export default async function ProductDetail({
                 >
                   <div className="relative h-40 w-full overflow-hidden">
                     <Image
-                      src={`https://hanutech-website.vercel.app${p.image}`}
+                    src={p.image}
                       alt={p.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"

@@ -30,7 +30,7 @@ export default async function ServiceDetail({
     <div className="bg-white dark:bg-slate-900">
       <section className="relative h-72 bg-ink dark:bg-slate-950">
         <Image
-          src={`https://hanutech-website.vercel.app${service.image}`}
+          src={service.image}
           alt={service.title}
           fill
           sizes="100vw"

@@ -30,7 +30,7 @@ export default async function ProjectDetail({
     <div className="bg-white dark:bg-slate-900">
       <section className="relative h-80 bg-ink dark:bg-slate-950">
         <Image
-          src={`https://hanutech-website.vercel.app${project.image}`}
+          src={project.image}
           alt={project.title}
           fill
           sizes="100vw"

@@ -65,7 +65,7 @@ export default function Home() {
             <h1 className="max-w-3xl text-4xl font-extrabold leading-tight sm:text-6xl">
               {siteConfig.name}
             </h1>
-            <p className="mt-3 text-2xl font-light text-orange-300 font-semibold uppercase tracking-[0.3em] ">
+            <p className="mt-3 text-xl font-light text-orange-300 font-semibold uppercase tracking-[0.2em] ">
               {siteConfig.tagline}
             </p>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-250">
@@ -270,7 +270,7 @@ export default function Home() {
                 >
                   <div className="relative h-32 w-full">
                     <Image
-                      src={`https://hanutech-website.vercel.app${ind.image}`}
+                      src={ind.image}
                       alt={ind.title}
                       fill
                       sizes="(max-width: 768px) 50vw, 16vw"
@@ -327,7 +327,7 @@ export default function Home() {
             >
               <div className="relative h-72 w-full overflow-hidden">
                 <Image
-                  src={`https://hanutech-website.vercel.app${ind.image}`}
+                  src={ind.image}
                   alt={ind.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -376,7 +376,7 @@ export default function Home() {
                   <div>
                     <div className="relative h-48 w-full overflow-hidden">
                       <Image
-                        src={`https://hanutech-website.vercel.app${p.image}`}
+                        src={p.image}
                         alt={p.title}
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"

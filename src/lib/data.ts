@@ -52,7 +52,7 @@ export const services: Service[] = [
       "Performance auditing & optimization",
       "Spare management & AMC support",
     ],
-    image: "/images/pump-room.jpeg",
+    image: "/image_s/Pumping-Equipment-setup.webp",
   },
   {
     slug: "pipeline-engineering",
@@ -67,7 +67,7 @@ export const services: Service[] = [
       "Leak-proof jointing & testing",
       "ASME & ISO compliant execution",
     ],
-    image: "/images/liquid-primer-plant.jpeg",
+    image: "/image_s/line.avif",
   },
   {
     slug: "plant-automation",
@@ -82,7 +82,7 @@ export const services: Service[] = [
       "Robotic & automated control",
       "Data analytics & dashboards",
     ],
-    image: "/images/hanutech-robotics.jpeg",
+    image: "/image_s/plant_auto.avif",
   },
   {
     slug: "instrumentation",
@@ -97,7 +97,7 @@ export const services: Service[] = [
       "Control loop tuning",
       "Safety & alarm systems",
     ],
-    image: "/images/centralized-pump-room.jpeg",
+    image: "/image_s/instrumentation.jpg",
   },
   {
     slug: "industrial-fabrication",
@@ -112,7 +112,7 @@ export const services: Service[] = [
       "Certified welding (ASME)",
       "Surface treatment & painting",
     ],
-    image: "/images/birla-white-plant.jpeg",
+    image: "/videos/manufacturinng.jfif",
   },
 ];
 
@@ -131,42 +131,42 @@ export const industries: Industry[] = [
   {
     slug: "paint-industry",
     title: "Paint Industry",
-    image: "/images/paint-industry.png",
+    image: "/videos/paint.jfif",
     description:
       "Resin, emulsion and paint plant engineering with precision dosing, mixing and filling systems.",
   },
   {
     slug: "chemical-paints",
     title: "Chemical Paints",
-    image: "/images/industries/chemical-paints.png",
+    image: "/videos/chemical.jfif",
     description:
       "Specialty chemical and coating process lines engineered for safety and throughput.",
   },
   {
     slug: "water-treatment",
     title: "Water Treatment",
-    image: "/images/water-treatment.png",
+    image: "/videos/water.jpg",
     description:
       "Pumping and pipeline solutions for raw, process and effluent water treatment plants.",
   },
   {
     slug: "manufacturing",
     title: "Manufacturing",
-    image: "/images/manufacturing.png",
+    image: "/videos/manufacturinng.jfif",
     description:
       "Plant-wide utility and automation engineering for discrete and process manufacturing.",
   },
   {
     slug: "ceramic-industry",
     title: "Ceramic Industry",
-    image: "/images/ceramic-industry.jpg",
+    image: "/videos/ceramic-industry.jpg",
     description:
       "Slip, glaze and kiln utility systems engineered for the ceramic manufacturing sector.",
   },
   {
     slug: "food-and-beverage",
     title: "Food & Beverage",
-    image: "/images/hanutech-robotics.jpeg",
+    image: "/videos/food-and-beverage.jpg",
     description:
       "Hygienic pumping and automation for food, beverage and packaged goods production.",
   },
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     slug: "birla-white-plant",
     title: "Birla White Plant Expansion",
     category: "Manufacturing",
-    image: "/images/birla-white-plant.jpeg",
+    image: "/images_p/birla-white-plant.webp",
     summary:
       "Greenfield plant expansion delivering integrated pumping and pipeline infrastructure.",
     description:
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     slug: "liquid-primer-plant",
     title: "Liquid Primer Plant setup",
     category: "Paint Industry",
-    image: "/images/liquid-primer-plant.jpeg",
+    image: "/images_p/liquid-primer-plant.jpg",
     summary:
       "Turnkey liquid primer production line with automated dosing and filling.",
     description:
@@ -223,7 +223,7 @@ export const projects: Project[] = [
     slug: "centralized-pump-room",
     title: "Modernized Municipal Pump Room",
     category: "Fluid Dynamics",
-    image: "/images/pump-room.jpeg",
+    image: "/images_p/Modernized Municipal Pump Room.jpg",
     summary:
       "Centralized, instrumented pump room modernizing municipal water distribution.",
     description:
@@ -299,7 +299,7 @@ export const products: Product[] = [
       "ATEX & FDA compliant options",
     ],
     specs: ["Flow: up to 1,000 LPM", "Pressure: up to 8.3 bar", "Sizes: 1/4\" to 3\""],
-    image: "/images/pump-room.jpeg",
+    image: "/images_p/aod.jpg",
   },
   {
     slug: "eodd-pumps",
@@ -316,7 +316,7 @@ export const products: Product[] = [
       "Suitable for hazardous areas",
     ],
     specs: ["Flow: up to 400 LPM", "Pressure: up to 6 bar", "Power: 0.37–2.2 kW"],
-    image: "/images/centralized-pump-room.jpeg",
+    image: "/images_p/EODD pumps.webp",
   },
   {
     slug: "gear-pumps",
@@ -333,7 +333,7 @@ export const products: Product[] = [
       "Jacketed options for heated media",
     ],
     specs: ["Flow: 0.5–500 GPM", "Pressure: up to 200 PSI", "Materials: CI, SS, Alloy"],
-    image: "/images/liquid-primer-plant.jpeg",
+    image: "/images_p/Gear pumps.jpg",
   },
   {
     slug: "dosing-pumps",
@@ -350,7 +350,7 @@ export const products: Product[] = [
       "Integrated relief valve",
     ],
     specs: ["Flow: 0.1–1,000 LPH", "Pressure: up to 20 bar", "Accuracy: ±1%"],
-    image: "/images/water-treatment.png",
+    image: "/images_p/Dosing Pumps.jpg",
   },
   {
     slug: "centrifugal-pumps",
@@ -366,7 +366,7 @@ export const products: Product[] = [
       "CI, SS & PP construction",
     ],
     specs: ["Flow: up to 500 m³/hr", "Head: up to 80 m", "Temperature: up to 120°C"],
-    image: "/images/pump-room.jpeg",
+    image: "/images_p/Centrifugal Pumps.webp",
   },
   {
     slug: "submersible-pumps",
@@ -382,7 +382,7 @@ export const products: Product[] = [
       "Auto float-switch compatible",
     ],
     specs: ["Flow: up to 200 m³/hr", "Head: up to 40 m", "Solids handling: up to 50 mm"],
-    image: "/images/water-treatment.png",
+    image: "/images_p/Submersible Pumps.png",
   },
   {
     slug: "plc-control-panels",
@@ -399,7 +399,7 @@ export const products: Product[] = [
       "IP54 / IP65 enclosure options",
     ],
     specs: ["IO: 16–512 points", "Enclosure: IP54/IP65", "Voltage: 415V 3-phase"],
-    image: "/images/hanutech-robotics.jpeg",
+    image: "/images_p/PLC Control Panels.webp",
   },
   {
     slug: "scada-systems",
@@ -415,7 +415,7 @@ export const products: Product[] = [
       "Historian & reporting",
     ],
     specs: ["Tags: up to 10,000", "Protocols: Modbus, OPC-UA", "Uptime: 99.9%"],
-    image: "/images/centralized-pump-room.jpeg",
+    image: "/images_p/SCADA Systems.jpg",
   },
   {
     slug: "iot-monitoring",
@@ -431,7 +431,7 @@ export const products: Product[] = [
       "Energy analytics",
     ],
     specs: ["Range: up to 500 m", "Battery life: 2–5 years", "Cloud: AWS / Azure"],
-    image: "/images/hanutech-robotics.jpeg",
+    image: "/images_p/IoT Monitoring Units.avif",
   },
   {
     slug: "motor-control-centers",
@@ -447,7 +447,7 @@ export const products: Product[] = [
       "IEC 61439 compliant",
     ],
     specs: ["Rating: up to 630A", "Voltage: 415V", "Enclosure: Form 2B/4B"],
-    image: "/images/birla-white-plant.jpeg",
+    image: "/videos/manufacturinng.jfif",
   },
   {
     slug: "flow-meters",
@@ -463,7 +463,7 @@ export const products: Product[] = [
       "IP67 enclosure rating",
     ],
     specs: ["Accuracy: ±0.5%", "Sizes: DN15–DN600", "Output: 4–20 mA / RS485"],
-    image: "/images/centralized-pump-room.jpeg",
+    image: "/images_p/Flow Meters.jpg",
   },
   {
     slug: "level-transmitters",
@@ -479,7 +479,7 @@ export const products: Product[] = [
       "Explosion-proof options",
     ],
     specs: ["Range: up to 30 m", "Accuracy: ±3 mm", "Process temp: up to 200°C"],
-    image: "/images/birla-white-plant.jpeg",
+    image: "/images_p/Level Transmitters.jpg",
   },
   {
     slug: "pressure-instruments",
@@ -495,7 +495,7 @@ export const products: Product[] = [
       "Calibration certificates included",
     ],
     specs: ["Range: 0–600 bar", "Accuracy: ±0.25%", "Output: 4–20 mA"],
-    image: "/images/pump-room.jpeg",
+    image: "/videos/paint.jfif",
   },
   {
     slug: "temperature-sensors",
@@ -511,7 +511,7 @@ export const products: Product[] = [
       "Head-mounted transmitters",
     ],
     specs: ["Range: -200°C to 1,600°C", "Accuracy: ±0.1°C", "Output: 4–20 mA"],
-    image: "/images/manufacturing.png",
+    image: "/videos/manufacturinng.jfif",
   },
   {
     slug: "storage-tanks",
@@ -527,7 +527,7 @@ export const products: Product[] = [
       "Hydro test certified",
     ],
     specs: ["Capacity: 500 L–50,000 L", "Pressure: atmospheric", "Material: MS / SS"],
-    image: "/images/birla-white-plant.jpeg",
+    image: "/videos/manufacturinng.jfif",
   },
   {
     slug: "process-vessels",
@@ -543,7 +543,7 @@ export const products: Product[] = [
       "Full NDT & hydro testing",
     ],
     specs: ["Volume: 100 L–20,000 L", "Pressure: up to 10 bar", "Material: SS 316L"],
-    image: "/images/liquid-primer-plant.jpeg",
+    image: "/videos/chemical.jfif",
   },
   {
     slug: "custom-skids",
@@ -559,7 +559,7 @@ export const products: Product[] = [
       "Plug-and-play installation",
     ],
     specs: ["Frame: ISMC / SHS steel", "Finish: epoxy painted", "Testing: FAT included"],
-    image: "/images/paint-industry.png",
+    image: "/videos/paint.jfif",
   },
 ];
 

@@ -60,7 +60,7 @@ export default function ServicesPage() {
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="relative h-64 w-full overflow-hidden rounded-xl lift">
                     <Image
-                      src={`https://hanutech-website.vercel.app${s.image}`}
+                      src={s.image}
                       alt={s.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
@@ -112,7 +112,7 @@ export default function ServicesPage() {
             <div className={i % 2 === 1 ? "lg:order-2" : ""}>
               <div className="group relative h-64 w-full overflow-hidden rounded-xl lift shadow-lg">
                 <Image
-                  src={`https://hanutech-website.vercel.app${s.image}`}
+                  src={s.image}
                   alt={s.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

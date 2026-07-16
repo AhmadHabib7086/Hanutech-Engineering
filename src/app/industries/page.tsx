@@ -37,7 +37,7 @@ export default function IndustriesPage() {
               >
                 <div className="relative h-48 w-full">
                   <Image
-                    src={`https://hanutech-website.vercel.app${ind.image}`}
+                    src={ind.image}
                     alt={ind.title}
                     fill
                     sizes="(max-width: 1024px) 50vw, 33vw"
