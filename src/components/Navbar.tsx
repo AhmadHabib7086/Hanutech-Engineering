@@ -33,7 +33,7 @@ export default function Navbar() {
               <span className="text-xl font-extrabold tracking-wide text-ink dark:text-white">
                 {siteConfig.brand}
               </span>
-              <span className="text-xs text-orange-500">
+              <span className="text-xs text-orange-500 uppercase">
                 {siteConfig.tagline}
               </span>
             </div>

@@ -1,6 +1,9 @@
+import Image from "next/image";
 import { Container, SectionHeading, Button } from "@/src/components/ui";
 import { stats, siteConfig } from "@/src/lib/data";
 import ScrollReveal from "@/src/components/ScrollReveal";
+
+
 
 export const metadata = { title: "About Us" };
 
@@ -75,7 +78,7 @@ export default function AboutPage() {
               About Us
             </p>
             <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl max-w-4xl leading-tight">
-              Engineering excellence since day one
+              Pioneering Industrial <span className="text-brand"> Innovation </span>
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
               {siteConfig.name} is a total engineering solutions provider
@@ -87,58 +90,147 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Stats and Story Section */}
-      <section className="py-24 bg-grid-dots overflow-hidden relative">
-        <Container className="relative z-10">
-          <div className="grid gap-12 lg:grid-cols-12 items-center">
-            
-            {/* Story column */}
-            <div className="lg:col-span-7">
-              <ScrollReveal variant="fade-up" duration={700}>
-                <SectionHeading
-                  eyebrow="Who We Are"
-                  title="Precision. Innovation. Reliability."
-                  subtitle=""
+
+
+       <section className="py-20">
+  <Container>
+    <div className="space-y-12">
+      
+        <ScrollReveal
+          variant="slide-left"
+  delay={0}
+  duration={800}
+        >
+          <div className="grid items-center gap-8 lg:grid-cols-2">
+            {/* Image */}
+            <div>
+              <div className="group relative h-110 w-full overflow-hidden rounded-xl lift shadow-lg">
+                <Image
+                  src={"/videos/ceo-founder.webp"}
+                  alt="Prashant Sharma, founder of Hanutech Engineering"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-900 group-hover:scale-110" 
                 />
-                <div className="mt-6 space-y-5 text-slate-600 text-lg leading-relaxed">
-                  <p>
-                    From pump rooms to fully automated plants, we combine deep
-                    domain expertise with modern engineering practices to solve
-                    complex industrial challenges.
-                  </p>
-                  <p>
-                    Our teams handle design, fabrication, installation,
-                    automation and maintenance — delivering end-to-end ownership of
-                    your engineering goals.
-                  </p>
-                </div>
-              </ScrollReveal>
+                {/* Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+    {/* Text on Image */}
+    <div className="absolute bottom-6 left-6 z-10 text-white">
+      <h3 className="text-2xl font-bold">Mr. Rahul Mourya</h3>
+      <p className="text-sm font-semibold  tracking-[0.2em] text-brand-light">
+        Founder &amp; Visionary
+      </p>
+    </div>
+              </div>
             </div>
 
-            {/* Staggered stats column */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-5">
-              {stats.map((s, idx) => (
-                <ScrollReveal
-                  key={s.label}
-                  variant="scale-up"
-                  delay={idx * 150}
-                  className="h-full"
-                >
-                  <div
-                    className="lift group rounded-xl border border-slate-200 p-6 text-center bg-white glow-orange-hover h-full flex flex-col justify-center"
-                  >
-                    <p className="text-4xl font-extrabold text-brand group-hover:scale-105 transition-transform duration-300">{s.value}</p>
-                    <p className="mt-2 text-sm font-semibold text-slate-500 uppercase tracking-wide">
-                      {s.label}
-                    </p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
+            {/* Content */}
+            <div>
+              <h2 className="text-3xl font-bold text-ink dark:text-white">
+                Established with a <span className="text-brand"> Vision </span>.
+              </h2>
 
+              <p className="mt-3 text-ink-soft dark:text-slate-500">
+                HanuTech Engineering Solutions was established in February 2021 by Mr. Rahul Mourya with a vision to deliver reliable engineering solutions in the field of pumps, pipelines, valves, instruments, and complete industrial project works. Our expertise includes piping, engineering, 
+                and plant designing for industries such as paints, inks, and chemicals.
+                <br/><br/>
+
+                We have extensive experience in providing complete pumping solutions for a wide range of industries including Paints, Inks, Chemicals, Pharmaceuticals,
+                 Pulp & Paper, Automobiles, Ceramics, Sanitaryware, and Oil & Gas. Our focus is always on delivering high-quality workmanship with cost-effective and long-lasting solutions.
+
+                 <br/><br/>
+                 HanuTech began its journey during the peak pandemic period in 2021, overcoming challenges with dedication and determination.
+                  Since then, we have continued to grow steadily while maintaining our strong commitment to quality, reliability, and customer satisfaction.
+              </p>
+            </div>
           </div>
-        </Container>
-      </section>
+        </ScrollReveal>
+      
+    </div>
+
+    {/* <div className="mt-16 text-center">
+      <Button href="/projects" variant="primary">
+        See Our Projects
+      </Button>
+    </div> */}
+  </Container>
+</section>
+    
+
+
+
+   <section className="py-20">
+  <Container>
+    <div className="space-y-12">
+
+      <ScrollReveal
+        variant="slide-left"
+        delay={0}
+        duration={800}
+      >
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+
+          {/* Content */}
+          <div>
+            {/* <h2 className="text-3xl font-bold text-ink dark:text-white">
+              E
+            </h2> */}
+            <h3 className="text-3xl font-bold text-ink dark:text-white">
+                  Prashant Sharma
+                </h3>
+                <p className="text-sm font-semibold tracking-[0.2em] text-brand-light">
+                  Associate Professor
+                </p>
+
+            <p className="mt-3 text-ink-soft dark:text-slate-500 text-lg">
+             As an Associate Professor, Prashant Sharma brings a wealth of academic and technical expertise to the industrial landscape.
+              His deep understanding of engineering principles and commitment to educational excellence helps bridge the gap between theoretical knowledge and practical application.
+
+              <br />
+              <br />
+
+             His role involves providing strategic guidance on technical standards and fostering innovation 
+             within the engineering domain, ensuring that Hanutech remains at the forefront of industrial advancements.
+
+             
+            </p>
+          </div>
+
+          {/* Image */}
+          <div>
+            <div className="group relative h-110 w-full overflow-hidden rounded-xl lift shadow-lg">
+              <Image
+                src="/images_p/prashant-sharma.webp"
+                alt="Prashant Sharma, founder of Hanutech Engineering"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-900 group-hover:scale-110"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+              {/* Text on Image */}
+              <div className="absolute bottom-6 left-6 z-10 text-white">
+                <h3 className="text-2xl font-bold">
+                  Prashant Sharma
+                </h3>
+                <p className="text-sm font-semibold tracking-[0.2em] text-brand-light">
+                  Associate Professor
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ScrollReveal>
+
+    </div>
+  </Container>
+</section>
+
+     
 
       {/* Custom Core Values and Quality Standards Grid */}
       <section className="py-24 bg-slate-50 border-t border-b border-slate-200 overflow-hidden relative">
