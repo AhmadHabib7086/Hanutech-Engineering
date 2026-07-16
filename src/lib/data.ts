@@ -138,7 +138,7 @@ export const industries: Industry[] = [
   {
     slug: "chemical-paints",
     title: "Chemical Paints",
-    image: "/videos/chemical.jfif",
+    image: "/images_p/chemical-paints.webp",
     description:
       "Specialty chemical and coating process lines engineered for safety and throughput.",
   },
