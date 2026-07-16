@@ -131,7 +131,7 @@ export const industries: Industry[] = [
   {
     slug: "paint-industry",
     title: "Paint Industry",
-    image: "/videos/paint.jfif",
+    image: "/images_p/paint-industry.jpg",
     description:
       "Resin, emulsion and paint plant engineering with precision dosing, mixing and filling systems.",
   },
